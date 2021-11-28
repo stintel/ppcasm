@@ -15,5 +15,7 @@ int main(void) {
 	else
 		printf("AltiVec not supported\n");
 
+	doasm();
+
 	return 0;
 }

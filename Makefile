@@ -1,5 +1,5 @@
 build:
-	gcc -mabi=elfv2 -o ppcasm main.c
+	gcc -mabi=elfv2 -o ppcasm main.c asm.s
 
 clean:
 	$(RM) ppcasm
