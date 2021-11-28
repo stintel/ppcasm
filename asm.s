@@ -5,6 +5,9 @@
 
 _doasm:
 doasm:
+	# LR to GPR10
+	mflr	10
+
 	# need to skip .long because it's not a valid instruction
 	# is this the only way of loading in a variable?
 	bl	0f
@@ -21,9 +24,7 @@ doasm:
 	addi	5,0,4		# third argument (len = 4 bytes) to GPR5
 	sc
 
-	# exit 0 without mnemonics
-	addi	0,0,1	# linux ppc exit syscall number to GPR0
-	addi	3,0,0	# first argument (status = 0) to GPR3
-	sc		# execute syscall
+	# GPR10 to LR
+	mtlr	10
 
-
+	blr

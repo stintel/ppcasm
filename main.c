@@ -17,5 +17,7 @@ int main(void) {
 
 	doasm();
 
+	printf("\nASM done, back to C\n");
+
 	return 0;
 }
