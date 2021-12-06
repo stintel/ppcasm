@@ -1,5 +1,7 @@
+CFLAGS ?= -mabi=elfv2
+
 build:
-	gcc -mabi=elfv2 -o ppcasm main.c asm.s
+	gcc $(CFLAGS) -o ppcasm main.c asm.s
 
 clean:
 	$(RM) ppcasm
