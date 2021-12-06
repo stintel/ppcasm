@@ -10,12 +10,6 @@ int main(void) {
 
 	printf("__hwcap: 0x%08zx\n", __hwcap);
 
-	if (__hwcap & PPC_FEATURE_HAS_ALTIVEC)
-		printf("AltiVec supported\n");
-	else
-		printf("AltiVec not supported\n");
-
-	printf("doasm() returns: 0x%08zx\n", doasm());
-
-	return 0;
+	printf("ASM: AltiVec %s supported\n", doasm() ? "is" : "not" );
+	printf("C: AltiVec %s supported\n", __hwcap & PPC_FEATURE_HAS_ALTIVEC ? "is" : "not" );
 }

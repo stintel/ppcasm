@@ -1,6 +1,8 @@
+#include <stdbool.h>
+
 #define PPC_FEATURE_HAS_ALTIVEC	0x10000000
 
 extern size_t __hwcap;
 
-size_t _doasm();
-size_t doasm();
+bool _doasm();
+bool doasm();

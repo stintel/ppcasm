@@ -26,6 +26,16 @@ doasm:
 	add	3, 3, 4
 	lwz	3, 0(3)
 
+	andis.	3, 3, 0x1000
+
+	# set retval to false - altivec not supported
+	addi	3, 0, 0
+	beq	1f
+
+	# set retval to true - altivec supported
+	addi	3, 0, 1
+
+1:
 	# GPR14 to LR
 	mtlr	14
 
