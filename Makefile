@@ -4,7 +4,7 @@ build:
 	gcc $(CFLAGS) -o ppcasm main.c asm.s
 
 clean:
-	$(RM) ppcasm
+	$(RM) *.o ppcasm
 
 run:
 	./ppcasm
