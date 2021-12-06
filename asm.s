@@ -35,6 +35,8 @@ doasm:
 	# set retval to true - altivec supported
 	addi	3, 0, 1
 
+	fsqrt	5, 16
+
 1:
 	# GPR14 to LR
 	mtlr	14
