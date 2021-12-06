@@ -21,6 +21,11 @@ doasm:
 	# read LR value into GPR3
 	mflr	3
 
+	# voodoo to get actual value of __hwcap
+	lwz	4, 0(3)
+	add	3, 3, 4
+	lwz	3, 0(3)
+
 	# GPR14 to LR
 	mtlr	14
 
