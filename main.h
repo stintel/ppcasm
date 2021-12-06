@@ -2,5 +2,5 @@
 
 extern size_t __hwcap;
 
-void _doasm();
-void doasm();
+size_t _doasm();
+size_t doasm();

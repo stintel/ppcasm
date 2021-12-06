@@ -15,9 +15,7 @@ int main(void) {
 	else
 		printf("AltiVec not supported\n");
 
-	doasm();
-
-	printf("\nASM done, back to C\n");
+	printf("doasm() returns: 0x%08zx\n", doasm());
 
 	return 0;
 }

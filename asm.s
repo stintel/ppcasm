@@ -18,15 +18,8 @@ doasm:
 	# wat? welp
 
 0:
-	# read LR value into GPR4
-	mflr	4
-
-	# print to stdout
-	addi	0,0,4		# linux ppc write syscall number to GPR0
-	addi	3,0,1		# first argument (fd = 1) to GPR3
-				# second argument is already in GPR4 by mflr
-	addi	5,0,1		# third argument (len = 1 byte) to GPR5
-	sc
+	# read LR value into GPR3
+	mflr	3
 
 	# GPR14 to LR
 	mtlr	14
