@@ -5,8 +5,8 @@
 
 _doasm:
 doasm:
-	# LR to GPR10
-	mflr	10
+	# LR to GPR14
+	mflr	14
 
 	# need to skip .long because it's not a valid instruction
 	# is this the only way of loading in a variable?
@@ -24,7 +24,7 @@ doasm:
 	addi	5,0,4		# third argument (len = 4 bytes) to GPR5
 	sc
 
-	# GPR10 to LR
-	mtlr	10
+	# GPR14 to LR
+	mtlr	14
 
 	blr
