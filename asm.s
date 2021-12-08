@@ -23,7 +23,7 @@ doasm:
 
 	# voodoo to get actual value of __hwcap
 	lwz	9, 0(10)
-	lwzx	7, 10 ,9
+	ldx	7, 10 ,9
 
 	andis.	6, 7, 0x1000
 
